@@ -9,18 +9,11 @@ import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.time.LocalDateTime;
 
-@Document(collection = "journal_entries")
+@Document(collection = "app_config")
 @Data
 @NoArgsConstructor
-public class JournalEnrty {
+public class AppConfigEntity {
 
-    @Id
-    private ObjectId id;
-
-    @NonNull
-    private String title;
-
-    private String content;
-
-    private LocalDateTime date;
+   private String key;
+   private String value;
 }
